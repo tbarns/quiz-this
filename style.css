@@ -1,0 +1,17 @@
+* {
+    font-family: "monospace", sans-serif;
+}
+
+header, footer {
+    font-weight: 300;
+    color: darkkhaki;
+
+}
+body {
+    background-color: black;
+}
+div {
+    background-color: darkkhaki;
+    padding: 80px;
+    border: 10px solid antiquewhite;
+}
