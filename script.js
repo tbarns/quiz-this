@@ -23,4 +23,4 @@ function startTime() {
   
     }, 1000);
   }
-start.setAttribute("style", "font-size: 40px; background-color: pink; border: 10px solid green; border-radius: 15px")
+start.setAttribute("style", "font-size: 40px; background-color: pink; border: 10px solid green; border-radius: 15px;")
