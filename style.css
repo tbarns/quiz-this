@@ -7,6 +7,13 @@ header, footer {
     color: darkkhaki;
 
 }
+
+.time {
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+}
+
 body {
     background-color: black;
 }
