@@ -20,6 +20,14 @@ body {
 }
 div {
     background-color: darkkhaki;
-    padding: 80px;
-    border: 10px solid antiquewhite;
+    padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#initials {
+    flex-direction: column;
+    width: 50%;
+    
 }

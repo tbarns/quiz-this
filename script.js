@@ -8,7 +8,7 @@ var start = document.getElementById("start");
 start.addEventListener("click", startTime);
 
 
-
+//odd glitch with the timer going into the negative 
 function startTime() {
     // Sets interval in variable
     var timerInterval = setInterval(function() {
@@ -16,9 +16,8 @@ function startTime() {
       timerEl.textContent = timeRemaining + " seconds remaining!";
   
       if(timeRemaining === 0) {
-         clearInterval(timerInterval);
-        //window.alert("Time's up!");
-//             return;
+        clearInterval(timerInterval);
+        return;
       }
   
     }, 1000);
