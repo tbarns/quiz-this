@@ -4,8 +4,9 @@
 
 header, footer {
     font-weight: 300;
-    color: darkkhaki;
-    text-shadow: 9px 4px 9px blue;
+    color: #ffca2a;
+    text-shadow: 9px 4px 9px #da5f4d;
+    -webkit-text-stroke: 1px #7d8087;
 
 }
 
@@ -16,10 +17,10 @@ header, footer {
 }
 
 body {
-    background-color: black;
+    background-color: #7cca42;
 }
 div {
-    background-color: darkkhaki;
+    background-color: #4ea37b;
     padding: 20px;
    display: flex;
    align-items: center;
@@ -31,3 +32,14 @@ div {
     width: 50%;
     
 }
+
+/* prefered colors
+body {
+ background-color: #7d8087;
+ background-color: #7cca42;
+ background-color: #ffca2a;
+  background-color:#6eccf0;
+  background-color:#da5f4d;
+ background-color:#4ea37b;
+}
+:) */
