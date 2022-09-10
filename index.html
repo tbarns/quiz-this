@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,45 @@
     <link rel="stylesheet" href="style.css">
     <title>Quiz This</title>
 </head>
-<body>
-    <header>
-        <h1>Wanna see what you know?</h1>
-        <h2 class="timer" style="text-align:right"></h2>
-    </header>
- <container>
-        <div>
-            <button id="start">START</button>
-        </div>
- </container>
 
-<div>
-    <form id ="submitForm">
-    
-        <div>
-         <input placeholder="initials" id="initials" />
-                <button id="submit">Submit</button>
-                <div>
-                <h3 id="response"></h3>
+<body>
+
+    <h2 class="timer" style="text-align:right"></h2>
+    </header>
+    <container class="startMenu">
+        <header>
+            <h1>Wanna see what you know?</h1>
+            <h2>Let's test your drag knowledge</h2>
+            <div>
+                <button id="start">START</button>
             </div>
-         <h3 id="response"></h3>
-        </div>
-    </form>
-    <container id="quizBox" class="hidden">
-     
-         </container>
-    <button id="Confirm Answer">
-        Confirm
-      </button>
-</div>
+    </container>
+
+    <div class="quizBox">
+        
+        <button class="answers" data-number="1" >choice 1</button>
+        <button class="answers" data-number="2" >choice 2</button>
+        <button class="answers" data-number="3" >choice 3</button>
+        <button class="answers" data-number="4" >choice 4</button>
+    </div>
+
+
+
+
+
+    <div id="submitForm">
+        <form>
+
+            <input placeholder="initials" id="initials" />
+            <button id="submit">Submit</button>
+        </form>
+
+    </div>
 
     <footer>
         <h3>You got this! Don't give up!!</h3>
     </footer>
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
-
-
