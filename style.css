@@ -1,8 +1,14 @@
 * {
     font-family: "monospace", sans-serif;
 }
-
-header, footer {
+#qTitle {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    font-size: 100px;
+    color: #7cca42;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 2px 4px 4px white;
+}
+.startMenu, footer {
     font-weight: 300;
     color: #ffca2a;
     text-shadow: 9px 4px 9px #da5f4d;

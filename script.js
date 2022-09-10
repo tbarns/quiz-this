@@ -2,9 +2,10 @@ var timerEl = document.querySelector(".timer");
 var start = document.querySelector("#start")
 var timeRemaining = 5;
 var index = 0;
-var currentquestion= {};
+var currentquestion= 0;
 var score = 0;
 var box = document.querySelector(".quizBox")
+var incorrect = 10
 
 var questions = [{
   questionTitle: "Who is Rupaul?",
@@ -33,41 +34,61 @@ var questions = [{
 },
 ];
 
-var qEl = document.createElement('h2')
-var choices = Array.from(document.querySelectorAll(".answers"))
-qEl.textContent = questions[0].questionTitle
 
 
-for (var i=0; i < questions.length; i++){
-    var currentquestion = questions[i].questionTitle
-    var userAnswer = questions[i].choices
-    if (userAnswer == "questions[i].answers"){
-    score++;
-    }
-    if (i > questions.length) {
-      window.prompt(end)
-    }
+var qEl = document.querySelector('p')
+
+
+function presentQuestion (qEl) {
+
+  qEl.textContent = questions[0].questionTitle
+ 
+ questions.choices.forEach(function(){
+    var options = document.querySelectorAll(".answers")
+    options.textContent = questions[0].choices
+    
+  })
+
+
+// for (var i=0; i < questions.length; i++){
+  
+//   var choices = Array.from(document.querySelectorAll(".answers"))
+//   qEl.textContent = questions[i].questionTitle
+//   choices.textContent = questions[i].choices
+//     var userAnswer = questions[i].choices;
+//     // button.textContent = choices
+//     box.questionTitle[i] = qEl
+//     if (userAnswer == "questions[i].answers"){
+//     score++;
+//     }
+//     if (i > questions.length) {
+//       window.prompt(end)
+//     }
+
+
+    // questions.choices.forEach(function(choice){
+    //   var btns = document.querySelectorAll(".answers")
+    //   btns.textContent= choice
+    //   box.innerHTML(choice)
+    //}
+    //)
+    // box.addEventListener("click", localStorage.setItem("test", JSON.stringify(questions.choices[0])))
+    
+    
   
   
-  }
+ //}
+}
   
-  
+    start.addEventListener("click", startGame);
   //localStorage.setItem
 
 
-// questions.choices.forEach(function(choice){
-//   var btns = document.createElement("#quizBox")
-//   btns.textContent= choice
-//   box.appendChild(choice)
-// })
-// box.addEventListener("click", localStorage.setItem("test", JSON.stringify(questions.choices[0])))
 
-
-start.addEventListener("click", startTime);
 
 
 //odd glitch with the timer going into the negative 
-function startTime() {
+function startGame() {
     // Sets interval in variable
     var timerInterval = setInterval(function() {
       timeRemaining--;
@@ -79,6 +100,7 @@ function startTime() {
       }
   
     }, 1000);
+    presentQuestion (qEl)
   }
 start.setAttribute("style", "font-size: 40px; background-color: background-color:#6eccf0;; border: 10px solid #ffca2a;; border-radius: 15px;")
 
