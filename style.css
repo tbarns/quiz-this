@@ -55,7 +55,9 @@ div {
 }
 .answers {
     background-color: #7d8087;
-    font-size: 50px;
+    font-size: 30px;
+    padding: 10px;
+    
 }
 
 footer{

@@ -91,6 +91,6 @@ function startGame() {
 function checkAnswer(){
     
 }
-
+console.log(start)
 start.setAttribute("style", "font-size: 40px; background-color: background-color:#6eccf0;; border: 10px solid #ffca2a;; border-radius: 15px;")
 
