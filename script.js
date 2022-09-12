@@ -2,11 +2,15 @@ var timerEl = document.querySelector(".timer");
 var start = document.querySelector("#start")
 var timeRemaining = 5;
 var index = 0;
-var currentquestion= 0;
+var questionIndex= 0;
 var score = 0;
 var box = document.querySelector(".quizBox")
 var incorrect = 10
+var qEl = document.querySelector('p')
 
+
+
+//questions choices and answers for quiz
 var questions = [{
   questionTitle: "Who is Rupaul?",
   choices: ["Mother", "The Queen of Drag", "My inner saboteur", "All of the above"],
@@ -36,19 +40,54 @@ var questions = [{
 
 
 
-var qEl = document.querySelector('p')
 
 
 function presentQuestion (qEl) {
 
+  var options = Array.from(document.querySelectorAll(".answers"))
   qEl.textContent = questions[0].questionTitle
- 
- questions.choices.forEach(function(){
-    var options = document.querySelectorAll(".answers")
-    options.textContent = questions[0].choices
-    
-  })
+  var currentQuestion = questions[questionIndex];
+  options.textContent ='';
+    options.textContent = questions[i].choices
+    var userAnswer = questions[i].choices;
+    // button.textContent = choices
+    box.questionTitle[i] = qEl
+    if (userAnswer == "questions[i].answers"){
+    score++;
+    }
+    if (i > questions.length) {
+      window.prompt(end)
+    }
 
+
+    questions.choices.forEach(function(choice){
+      var btns = document.querySelectorAll(".answers")
+      btns.textContent= choice
+      box.innerHTML(choice)
+    }
+    )
+    box.addEventListener("click", localStorage.setItem("test", JSON.stringify(questions.choices[0])))
+    
+
+ 
+    // currentQuestion.choices.forEach(function(choice, i){
+    
+    // options.textContent = i + 1 + ". " + choice;
+
+    options.addEventListener("click", selectAnswer())
+    
+  // })
+}
+
+  function selectAnswer() {
+    // if (this.value !== questions[questionIndex].answers) {
+    //   timeRemaining -= incorrect;
+    // if (timeRemaining < 0) {
+    //   timeRemaining = 0
+    // }
+timerEl.textContent =timeRemaining;
+  // }
+  }
 
 // for (var i=0; i < questions.length; i++){
   
@@ -78,7 +117,7 @@ function presentQuestion (qEl) {
   
   
  //}
-}
+// }
   
     start.addEventListener("click", startGame);
   //localStorage.setItem
