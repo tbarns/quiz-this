@@ -1,22 +1,26 @@
 * {
     font-family: "monospace", sans-serif;
 }
+
 #qTitle {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 100px;
     color: #7cca42;
     -webkit-text-stroke: 2px black;
     text-shadow: 2px 4px 4px white;
 }
-container, .quizBox{
-    display:flex;
+
+container,
+.quizBox {
+    display: flex;
     width: 50;
     height: 50;
     align-items: center;
     justify-content: center;
-    
+
 
 }
+
 .startMenu {
     font-weight: 300;
     color: #ffca2a;
@@ -39,28 +43,36 @@ container, .quizBox{
 body {
     background-color: #7cca42;
 }
+
 div {
     background-color: #4ea37b;
     padding: 20px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #submitForm {
     flex-direction: column;
     width: 50%;
     display: none;
-    
+
 }
+
 .answers {
     background-color: #7d8087;
     font-size: 30px;
     padding: 10px;
-    
+    border-radius: 10px;
 }
 
-footer{
+/* adds a colr change to the buttons so the user knows they should click them */
+.answers:hover {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+footer {
     font-size: 30px;
     color: black;
     display: none;

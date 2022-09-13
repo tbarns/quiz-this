@@ -10,7 +10,9 @@ Here is a link to the live application!
 https://tbarns.github.io/quiz-this/
 
 ## Usage 
+<img src="Screenshot_1.png" alt="screenshot of live website">
 
+<img src="Screenshot_2.png" alt="screenshot of live website">
 
 
 
