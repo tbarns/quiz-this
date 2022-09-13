@@ -3,7 +3,7 @@
 
 ## Description
 I was tasked to use JavaScript to create a a quiz about any subject. The quiz needs to have a timer and store the user's scores and intials upon completion.
-I have struggled with the funtionalilty and logic of JavaScript and I didnt find much to celebrate with this code.
+I have struggled with the funtionalilty and logic of JavaScript and I didnt find much to celebrate with this code. I was able to make some logic that allowed for time to count down and for there to be a deduction of time when the user asnwers incorrectly.  I wasnt able to get far enough to push the scores to local storage and createa high score counter
 
 ## Installation 
 Here is a link to the live application!
@@ -17,7 +17,7 @@ https://tbarns.github.io/quiz-this/
 
 
 ## Credits
-
+N/A
 ## License
 
 MIT License
