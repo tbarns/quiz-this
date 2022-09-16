@@ -7,7 +7,8 @@ var box = document.querySelector(".quizBox")
 var incorrect = 10
 var qEl = document.querySelector('p')
 var footer = document.querySelector("footer")
-
+// var choices = questions.choices
+var buttons = document.createElement('button')
 
 hideBtns()
 // questions choices and answers for quiz
@@ -47,14 +48,26 @@ function hideBtns() {
 function presentQuestion(qEl) {
     box.style.display = "block"
     footer.style.display = "block"
+  
 
-
+    buttons.textContent = "";
 
     for (var i = 0; i < questions.length; i++)
 
-        qEl.textContent = questions[0].questionTitle
+    qEl.textContent = questions[0].questionTitle
+    UserChoices =questions[index].choices
+    UserChoices.forEach(function(newChoice){
+        
+        buttons.textContent =newChoice
+        box.appendChild(buttons)
+        //add event lister to check answer
+        buttons.addEventListener("click", checkAnswer)
 
-    box.addEventListener("click", checkAnswer1)
+    })
+
+
+
+
 
     // i was trying to write a for loop to push the possible answers in my array into the buttons but I cant figure it out
     // questions.choices.forEach(function(choice, index ){
@@ -85,15 +98,25 @@ function startGame() {
 }
 
 //this function checks the asnwer for Q 1.  ideally i would have a rule that checks them all and i dont have to write multiple functions but i havent figured that out yet
-function checkAnswer1() {
-    EventTarget = document.getElementsByClassName("answers")
-    if (EventTarget == "All of the above") {
-        window.alert("CORRECT!")
+function checkAnswer(event) {
+    var element =event.target;
+    if (element.matches("answers"))
+        var textBox =document.createElement("h3")
+        // textBox.setAttribute("id", "textBox")
+        if(element.textBox == questions[index].answers){
+            textBox.textContent="werk!"
+        
     } else {
-        window.alert("oops!")
+        
         timeRemaining -= 10
-    }
+    
 }
+    if(index>= questions.length){
+    return}
+    else{
+        presentQuestion(index)
+
+}}
 // this sets the style for my start button
 start.setAttribute("style", "font-size: 40px; background-color: background-color:#6eccf0;; border: 10px solid #ffca2a;; border-radius: 15px;")
 
